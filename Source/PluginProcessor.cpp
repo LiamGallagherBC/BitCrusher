@@ -101,13 +101,13 @@ BitCrusherAudioProcessor::BitCrusherAudioProcessor()
                        )
 #endif
 {
-	noiseParam       = parameters.getRawParameterValue("noise");
-	rateParam        = parameters.getRawParameterValue("rate");
-	bitsParam        = parameters.getRawParameterValue("bits");
-	mixParam         = parameters.getRawParameterValue("mix");
-	gainParam        = parameters.getRawParameterValue("gain");
-	noiseTypeParam   = parameters.getRawParameterValue("noiseType");
-	noiseAlgoParam   = parameters.getRawParameterValue("noiseAlgo");
+	noiseParam       = (float*)parameters.getRawParameterValue("noise");
+	rateParam        = (float*)parameters.getRawParameterValue("rate");
+	bitsParam        = (float*)parameters.getRawParameterValue("bits");
+	mixParam         = (float*)parameters.getRawParameterValue("mix");
+	gainParam        = (float*)parameters.getRawParameterValue("gain");
+	noiseTypeParam   = (float*)parameters.getRawParameterValue("noiseType");
+	noiseAlgoParam   = (float*)parameters.getRawParameterValue("noiseAlgo");
 }
 
 BitCrusherAudioProcessor::~BitCrusherAudioProcessor()
