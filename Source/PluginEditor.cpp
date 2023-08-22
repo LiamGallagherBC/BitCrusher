@@ -36,13 +36,13 @@ BitCrusherAudioProcessorEditor::BitCrusherAudioProcessorEditor (BitCrusherAudioP
 	addAndMakeVisible(multiplyModeLabel);
 	addAndMakeVisible(gainLabel);
 
-	// setup noise type combobox
+	// setup noise type combo-box
 	addAndMakeVisible(noiseTypeMenu);
 	noiseTypeMenu.addItem("White", 1);
 	noiseTypeMenu.addItem("Simple", 2);
 	noiseTypeMenuAttachment.reset(new ComboBoxAttachment(valueTreeState, "noiseType", noiseTypeMenu));
 
-	// setup noise algo combobox
+	// setup noise algorithm combo-box
 	addAndMakeVisible(multiplyModeMenu);
 	multiplyModeMenu.addItem("Add", 1);
 	multiplyModeMenu.addItem("Mul", 2);
@@ -114,7 +114,5 @@ void BitCrusherAudioProcessorEditor::resized()
 	auto noiseAlgoComboBoxRect = noiseAlgoRect.removeFromLeft(comboBoxWidth);
 	multiplyModeMenu.setBounds(
 		noiseAlgoComboBoxRect.withSize(noiseAlgoComboBoxRect.getWidth() * 0.8, 
-			                           noiseAlgoComboBoxRect.getHeight() * 0.8));
-
-
+			noiseAlgoComboBoxRect.getHeight() * 0.8));
 }

@@ -16,7 +16,7 @@
 //==============================================================================
 /**
 */
-class BitCrusherAudioProcessorEditor  : public AudioProcessorEditor
+class BitCrusherAudioProcessorEditor : public AudioProcessorEditor
 {
 public:
 
@@ -66,7 +66,7 @@ private:
 		mixSliderAttachment,
 		gainSliderAttachment;
 	
-	// combo boxes
+	// combo-boxes
 	ComboBox noiseTypeMenu, multiplyModeMenu;
 	std::unique_ptr<ComboBoxAttachment> noiseTypeMenuAttachment, multiplyModeMenuAttachment;
 
